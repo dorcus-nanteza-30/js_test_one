@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body {
+    background-color: blue;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #449d44;
+  }
+  
+
+    </style>
+</head>
+<body>
+    <body>
+        <h2>MY FRIST JAVASCRIPT FORM</h2>
+    <div class="yeah">
+        <form onsubmit="return validateForm()">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+    
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" ><br>
+    
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+    
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+        <script>
+            function validateForm() {
+                let email = document.getElementById("email").value;
+                let name = document.getElementById("name").value;
+                let password = document.getElementById("password").value;
+    
+                if (email === "" || name === "" || password === "") {
+                    alert("Please fill all the values!");
+                    return false; 
+                }
+    
+    
+                return true;
+            }
+        </script>
+</body>
+</html>
